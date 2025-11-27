@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tshewang Samdup - Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Poppins font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Colors/Variables for the Purple Glow effect */
+        .glow-purple {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 60px rgba(139, 92, 246, 0.6);
+            transform: translateY(-5px);
+        }
+
+        /* Custom class for the Home background glow */
+        .bg-gradient-purple-radial {
+            background-image: radial-gradient(circle at 10% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-xl shadow-gray-900/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-extrabold text-indigo-400">Portfolio<span class="text-white">.</span></a>
+            <ul class="flex space-x-6 text-lg font-medium">
+                <li><a href="#home" class="text-indigo-400 hover:text-indigo-300 transition duration-300" onclick="setActiveLink(this)">Home</a></li>
+                <li><a href="#about" class="text-gray-400 hover:text-indigo-300 transition duration-300" onclick="setActiveLink(this)">About</a></li>
+                <li><a href="#skills" class="text-gray-400 hover:text-indigo-300 transition duration-300" onclick="setActiveLink(this)">Skills</a></li>
+                <li><a href="#projects" class="text-gray-400 hover:text-indigo-300 transition duration-300" onclick="setActiveLink(this)">Projects</a></li>
+                <li><a href="#contact" class="text-gray-400 hover:text-indigo-300 transition duration-300" onclick="setActiveLink(this)">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section (Desktop 1) -->
+    <main class="max-w-7xl mx-auto">
+        <section id="home" class="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 flex items-center bg-gradient-purple-radial">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Content Block -->
+                <div class="space-y-6 md:order-1 order-2">
+                    <p class="text-xl text-gray-400 font-semibold">Hello, It's Me</p>
+                    <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight text-white">
+                        Tshewang Samdup
+                    </h1>
+                    <p class="text-2xl font-semibold text-indigo-400">
+                        And I'm a <span class="text-indigo-300 border-b-2 border-indigo-500 pb-1">Student</span>
+                    </p>
+                    <p class="text-base text-gray-400 max-w-lg">
+                        I am currently studying Computer Science and Engineering, with a fervent passion for full-stack web development. I focus on creating scalable, high-performance applications that deliver exceptional user experiences.
+                    </p>
+                </div>
+
+                <!-- Right Image Block (Circular with Glow) -->
+                <div class="flex justify-center md:justify-end md:order-2 order-1">
+                    <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-indigo-500 glow-purple">
+                        <img src="/images/WhatsApp Image 2025-10-27 at 20.52.05_8d21a4d9.jpg" 
+                             alt="Tshewang Samdup Profile Photo" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section (Desktop 2) -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-indigo-400 relative pb-4">
+                About Me
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-indigo-500 rounded"></span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                
+                <!-- Left Image Block (Circular with Glow) -->
+                <div class="flex justify-center md:justify-start">
+                    <div class="w-72 h-72 rounded-full overflow-hidden border-4 border-indigo-500 glow-purple shadow-xl">
+                        <img src="/images/skills.jpg" 
+                             alt="About Me Image" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Content Block -->
+                <div class="space-y-6">
+                    <h3 class="text-4xl font-bold text-white">Hello, I'm Tshewang Samdup</h3>
+                    <p class="text-xl font-semibold text-indigo-400">And I'm a Student</p>
+                    
+                    <p class="text-gray-400">
+                        I am a dedicated student at **XYZ College of Science and Technology** specializing in software engineering. My coursework has equipped me with strong foundations in data structures, algorithms, and system design.
+                    </p>
+                    
+                    <p class="text-gray-400">
+                        I thrive on the challenge of transforming complex ideas into elegant code. I actively seek out opportunities for collaborative projects that push my boundaries and allow me to learn from experienced developers. My ultimate goal is to contribute to meaningful technological innovations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Desktop 3) -->
+        <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-800">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-indigo-400 relative pb-4">
+                Skills
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-indigo-500 rounded"></span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+                
+                <!-- Skill Card 1: Web Development -->
+                <div class="p-6 bg-gray-900 rounded-xl border border-indigo-700/50 glow-hover cursor-pointer">
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-4">Web Development</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Proficient in HTML, CSS, and JavaScript.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Strong knowledge of React, Vue.js, and Svelte.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Experience with Node.js, Express, and REST APIs.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Database management (PostgreSQL, MongoDB).</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 2: Programming & Algorithms -->
+                <div class="p-6 bg-gray-900 rounded-xl border border-indigo-700/50 glow-hover cursor-pointer">
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-4">Programming & Algorithms</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Expertise in C++ and Python.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Familiar with fundamental data structures and algorithms.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Strong competitive programming background.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Object-Oriented Programming (OOP) concepts.</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 3: Visual Design -->
+                <div class="p-6 bg-gray-900 rounded-xl border border-indigo-700/50 glow-hover cursor-pointer">
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-4">Visual Design</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Proficient use of Figma for UI/UX prototyping.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Experience with Adobe Photoshop and Illustrator.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Principles of responsive and accessible design.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Color theory and modern typography.</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Card 4: Tools & Platforms -->
+                <div class="p-6 bg-gray-900 rounded-xl border border-indigo-700/50 glow-hover cursor-pointer">
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-4">Tools & Platforms</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Git and GitHub for version control.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Deployment with Vercel and Netlify.</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> Cloud basics (AWS/GCP).</li>
+                        <li class="flex items-start"><span class="text-indigo-400 mr-2">&bull;</span> CI/CD pipelines and Docker familiarity.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Desktop 4) -->
+        <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-indigo-400 relative pb-4">
+                Projects
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-indigo-500 rounded"></span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Image Block (Circular with Glow) -->
+                <div class="flex justify-center md:justify-start md:order-1 order-2">
+                    <!-- Image with abstract/schematic content to fit the design vibe -->
+                    <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-indigo-500 glow-purple shadow-xl">
+                        <img src="/images/projects.png" 
+                             alt="Projects Visual" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Content Block -->
+                <div class="space-y-6 md:order-2 order-1">
+                    <p class="text-xl font-semibold text-white mb-4">A Selection of My Work</p>
+                    
+                    <ul class="space-y-6 text-gray-400 text-lg">
+                        <li class="flex items-start group hover:text-indigo-300 transition duration-300 cursor-pointer">
+                            <span class="text-indigo-500 text-3xl mr-3">&diams;</span>
+                            <div>
+                                <strong class="text-white group-hover:text-indigo-100">Booking App:</strong> Full-stack platform built with React and Express for seamless service scheduling.
+                            </div>
+                        </li>
+                        <li class="flex items-start group hover:text-indigo-300 transition duration-300 cursor-pointer">
+                            <span class="text-indigo-500 text-3xl mr-3">&diams;</span>
+                            <div>
+                                <strong class="text-white group-hover:text-indigo-100">Financial Analysis Tool:</strong> Utilizes D3.js for data visualization and complex computation.
+                            </div>
+                        </li>
+                        <li class="flex items-start group hover:text-indigo-300 transition duration-300 cursor-pointer">
+                            <span class="text-indigo-500 text-3xl mr-3">&diams;</span>
+                            <div>
+                                <strong class="text-white group-hover:text-indigo-100">Personal Portfolio:</strong> This very website, showcasing responsive design and modern CSS techniques.
+                            </div>
+                        </li>
+                        <li class="flex items-start group hover:text-indigo-300 transition duration-300 cursor-pointer">
+                            <span class="text-indigo-500 text-3xl mr-3">&diams;</span>
+                            <div>
+                                <strong class="text-white group-hover:text-indigo-100">Machine Learning Model:</strong> Implemented in Python for predictive analysis on large datasets.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section (Desktop 5) -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-800">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-indigo-400 relative pb-4">
+                Contact Me
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-indigo-500 rounded"></span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Content Block -->
+                <div class="space-y-6 md:order-1 order-2">
+                    <h3 class="text-4xl font-bold text-white mb-6">Get in Touch</h3>
+                    <ul class="space-y-4 text-gray-400 text-lg">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 3.484a1 1 0 01-.502.955L7.5 10.5h1.5l1.5-1.75l1.5 1.75h1.5l.616-.584a1 1 0 01.955-.502l3.484.74A1 1 0 0118 16.847V18a1 1 0 01-1 1H3a1 1 0 01-1-1v-2.153A1 1 0 012 13.847zM16 14.77l-2.454-.525a1 1 0 01-.986.836l-.74 3.484A1 1 0 0110.5 18V5.153A1 1 0 0111.847 4l2.454.525a1 1 0 01.986.836l.74 3.484A1 1 0 0116 11.153V14.77z"></path></svg>
+                            <span class="text-white font-semibold">171.234.56</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            <span class="text-white font-semibold">tshewang123@gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                            <span class="text-white font-semibold">Thimphu, Bhutan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm-5 8c0 .552-.448 1-1 1s-1-.448-1-1v-1c0-.552.448-1 1-1s1 .448 1 1v1zm8-1c-.552 0-1 .448-1 1v1c0 .552.448 1 1 1s1-.448 1-1v-1c0-.552-.448-1-1-1zm-4 4c-.552 0-1 .448-1 1s.448 1 1 1h2c.552 0 1-.448 1-1s-.448-1-1-1h-2zM4 10a1 1 0 011-1h1v2H4a1 1 0 01-1-1zM15 10a1 1 0 011-1h1v2h-2a1 1 0 01-1-1z"></path></svg>
+                            <span class="text-white font-semibold">771.234.56</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Image Block (Circular with Glow) -->
+                <div class="flex justify-center md:justify-end md:order-2 order-1">
+                    <div class="w-72 h-72 rounded-full overflow-hidden border-4 border-indigo-500 glow-purple shadow-xl">
+                        <img src="/images/contact.webp" 
+                             alt="Contact Visual" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-indigo-900/50 py-6 text-center text-gray-500">
+        <p>&copy; 2024 Tshewang Samdup. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and active link logic -->
+    <script>
+        function setActiveLink(clickedLink) {
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('text-indigo-400', 'hover:text-indigo-300');
+                link.classList.add('text-gray-400', 'hover:text-indigo-300');
+            });
+            clickedLink.classList.remove('text-gray-400');
+            clickedLink.classList.add('text-indigo-400');
+        }
+
+        // Add scroll-spy functionality to highlight active section in navbar
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // Highlight when 50% of section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-indigo-400', 'font-bold');
+                        link.classList.add('text-gray-400', 'font-medium');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('text-indigo-400', 'font-bold');
+                            link.classList.remove('text-gray-400');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
